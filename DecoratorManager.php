@@ -37,6 +37,7 @@ class DecoratorManager extends DataProvider
     {
         try {
             $cacheKey = $this->getCacheKey($input);
+            // Можно было бы выполнить после проверки наличия ключа
             $cacheItem = $this->cache->getItem($cacheKey);
 
             if ($cacheItem->isHit()) {
